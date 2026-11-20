@@ -69,6 +69,16 @@ python -m unittest discover -s tests        # offline tests, LLM mocked
 - Rejected (with reasons in `wedge_validation_report.json`): unknown record IDs or IDs not in the card's evidence, title not narrower than the parent or > 12 words, numbers not found in a cited record, superlatives, market-size/population claims. Portfolio near-duplicates are flagged, not rejected. Each wedge carries `size_status: "unvalidated"` and `generated_by`.
 - No key, no `openai` package, HTTP error, empty or truncated reply → no wedges; the pipeline still runs.
 
+### Optional: Wedge Validity Score (`--wedge-scores`, requires `--wedges`, default OFF)
+
+An independent model, Kimi K3.1 Pro, judges each valid wedge on 5 criteria (0–4 each): evidence support, entity grounding, specificity, decision clarity and distinctiveness. Python then computes `validity.score` (0–100, weighted; unknown criteria are dropped, never counted as 0; 2 or more unknown → `unscored`). Kimi's own overall number is ignored.
+```bash
+export FACTS_SCORE_MODEL=tesseracted-labs-gmbh/moonshotai/Kimi-K3.1-Pro   # default; same gateway env vars as above
+python generate_deliverables.py --wedges --wedge-scores
+```
+- **What it is:** a model-assessed plausibility check (`basis: "llm_assessed"`), shown next to deterministic `data_checks` (IDs exist and are in the card, entity named in a cited record, no sibling duplicate). Labels: high ≥ 75, medium 50–74, low < 50. `low`/`unscored` → `needs_human_review`.
+- **What it is not:** data-validated or market-sized. It only re-orders the wedges within a card. Card status, score and ranking are unchanged, and wedges stay `size_status: "unvalidated"`. Reasons citing unknown IDs or numbers are discarded. Failures leave the wedge `unscored` and are logged under `scoring` in `wedge_validation_report.json`.
+
 ---
 
 ## Deliverables Generated

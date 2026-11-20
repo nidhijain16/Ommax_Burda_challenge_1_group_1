@@ -172,7 +172,7 @@ def _get_client():
     if not base_url:
         from .ai_gateway import GATEWAY_BASE_URL  # non-secret URL constant only
         base_url = GATEWAY_BASE_URL
-    return OpenAI(base_url=base_url, api_key=api_key, max_retries=0)  # retries handled in _ask_model
+    return OpenAI(base_url=base_url, api_key=api_key, max_retries=0)  # retries handled in ask_text
 
 
 def call_gateway(model: str, messages: List[Dict[str, str]], max_tokens: int = MAX_TOKENS) -> Tuple[str, Optional[str]]:
@@ -219,13 +219,22 @@ def _extract_json_list(text: str) -> Optional[list]:
     return out if isinstance(out, list) else None
 
 
-def _ask_model(model: str, messages, chat_fn: Callable, sleep: Callable) -> Optional[list]:
-    """Call with retries. Returns a parsed JSON list, or None on any failure."""
+def gateway_key_present() -> bool:
+    return bool(os.environ.get("FACTS_GATEWAY_API_KEY", "").strip())
+
+
+def ask_text(model: str, messages, chat_fn: Callable, sleep: Callable) -> Optional[str]:
+    """Shared, model-agnostic call with retries (used by the wedge and wedge-score steps).
+
+    Retries once on an empty reply and backs off exponentially on HTTP 429/5xx.
+    Returns the reply text, or None on any failure (HTTP error, empty reply, error text).
+    Never raises and never caches.
+    """
     empty_retries = 1
     http_attempt = 0
     while True:
         try:
-            content, finish = chat_fn(model, messages, MAX_TOKENS)
+            content, _finish = chat_fn(model, messages, MAX_TOKENS)
         except Exception as exc:  # network / HTTP / client errors
             status = getattr(exc, "status_code", None)
             http_attempt += 1
@@ -240,10 +249,13 @@ def _ask_model(model: str, messages, chat_fn: Callable, sleep: Callable) -> Opti
             return None
         if _looks_like_error(content):
             return None
-        parsed = _extract_json_list(content)
-        if parsed is None:
-            return None  # includes finish_reason == "length" with cut-off JSON
-        return parsed
+        return content
+
+
+def _ask_model(model: str, messages, chat_fn: Callable, sleep: Callable) -> Optional[list]:
+    """Call with retries. Returns a parsed JSON list, or None on any failure."""
+    # Truncated replies (finish_reason == "length" with cut-off JSON) fail to parse -> None.
+    return _extract_json_list(ask_text(model, messages, chat_fn, sleep))
 
 
 def _normalise(raw: Any, model: str) -> Optional[Dict[str, Any]]:
