@@ -6,4 +6,5 @@ __pycache__/
 TEAM_EXECUTION_PLAN.md
 PITCH_AND_EXECUTIVE_QA.md
 SYSTEM_FLOWCHART.md
+*.drawio
 *wedge_validation_report.json
