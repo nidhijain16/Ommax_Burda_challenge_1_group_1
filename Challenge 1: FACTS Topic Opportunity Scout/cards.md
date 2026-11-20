@@ -4,31 +4,7 @@
 
 ---
 
-## TOP Providers for Age-appropriate home adaptation
-
-- **Recommended Status:** **`MONITOR`**
-- **Overall Score:** `3.73 / 5.0`
-- **Human-in-the-Loop Review:** ✅ NO
-
-| Mandatory Field | Strategic Assessment & Evidenced Claims |
-|---|---|
-| **Proposed TOP-List Topic** | TOP Providers for Age-appropriate home adaptation |
-| **Consumer Problem** | Hard to find trustworthy firms that plan and execute barrier-free conversions well. |
-| **Target User** | Older homeowners/tenants and their relatives |
-| **Potential Target Entity** | Service providers and specialist firms in Age-appropriate home adaptation |
-| **Why Now?** | Many dwellings are not barrier-reduced; older people and relatives need support with adaptation, conversion and access to specialised providers. () [S003] | The BAG Wohnungsanpassung connects housing-advice centres and supports people adapting their homes for independent living. () [S102] | Regulatory Milestone: Pflegekasse home adaptation grant raised to EUR 4,180 (2025-01-01) [R021] | Regulatory Milestone: KfW 455-B without budget in 2025 (2025-01-01) [R022] | Market metric: age_appropriate_dwellings_missing = 2200000 dwellings (current (study date unconfirmed)) [I0356] |
-| **Portfolio Fit** | Expands FOCUS brand into high-affinity white space under FOCUS Gesundheit / Deutschland Test. |
-| **Competitive Situation** | Market type: Directory-dominated. Existing players: BAG Wohnungsanpassung [C007] (public_information_service, quality assessment: no); DISQ Servicestudie Treppenliftanbieter [C112] (consumer_test, quality assessment: yes). Clear gap for transparent, methodology-backed quality orientation. |
-| **Facts (Evidenced)** | • 6 Large stairlift manufacturers with nationwide service recorded in Germany (2025) via DISQ sample; manufacturer websites [P047]<br>• age_appropriate_dwellings_needed: 3300000 dwellings in 2040 [I0357] |
-| **Hypotheses (Unverified)** | • Qualified providers will show positive willingness to license a FOCUS Quality Seal (Commercial status: unclear).<br>• Consumers consider independent editorial ranking significantly more trustworthy than sponsored lead-generation marketplaces.<br>• A master list of certified providers can be systematically compiled from official chambers and registers. |
-| **Risks & Uncertainties** | • Provider universe fragmentation: Reaching smaller regional businesses requires multi-channel sales outreach. |
-| **Historical Learning** | No negative legal precedent or court sanction identified in the dataset for this topic. |
-| **Next Validation Questions** | • Can an exhaustive master list be acquired directly from public registers or trade associations?<br>• What objective quality criteria (certifications, inspection reports, customer satisfaction) can be audited at scale?<br>• What is the willingness-to-pay among mid-sized providers for a regional or national quality seal? |
-| **Evidence Record IDs** | C007, C112, I0356, I0357, P047, R021, R022, S003, S102 |
-
----
-
-## TOP Providers for Heat pumps & heating replacement
+## TOP Heat-pump installers for owner-occupied homes
 
 - **Recommended Status:** **`VALIDATE NEXT`**
 - **Overall Score:** `3.66 / 5.0`
@@ -37,7 +13,7 @@
 
 | Mandatory Field | Strategic Assessment & Evidenced Claims |
 |---|---|
-| **Proposed TOP-List Topic** | TOP Providers for Heat pumps & heating replacement |
+| **Proposed TOP-List Topic** | TOP Heat-pump installers for owner-occupied homes |
 | **Consumer Problem** | Owners must pick an installer for a large, technically demanding investment under changing rules. |
 | **Target User** | Owners replacing a fossil heating system |
 | **Potential Target Entity** | Service providers and specialist firms in Heat pumps & heating replacement |
@@ -53,7 +29,55 @@
 
 ---
 
-## TOP Providers for Digital health
+## TOP Veterinary practices and emergency vet services
+
+- **Recommended Status:** **`VALIDATE NEXT`**
+- **Overall Score:** `3.79 / 5.0`
+- **Human-in-the-Loop Review:** ✅ NO
+
+| Mandatory Field | Strategic Assessment & Evidenced Claims |
+|---|---|
+| **Proposed TOP-List Topic** | TOP Veterinary practices and emergency vet services |
+| **Consumer Problem** | Pet owners face rising costs and fewer emergency services and want trustworthy vets nearby. |
+| **Target User** | Pet owners |
+| **Potential Target Entity** | Service providers and specialist firms in Veterinary care |
+| **Why Now?** | New GOT in force 22 Nov 2022; 43% of households own pets; pet market ~7bn EUR. (2022-2025) [S257] | 10,385 practices but only 129 clinics; 7,103 retired vs 11,216 self-employed. (2025) [S258] | Regulatory Milestone: New Gebührenordnung für Tierärzte (GOT) in force (2022-11-22) [R008] | Market metric: households_with_pets_share = 43 percent (2025) [I0627] |
+| **Portfolio Fit** | Expands FOCUS brand into high-affinity white space under FOCUS Gesundheit / Deutschland Test. |
+| **Competitive Situation** | Market type: Potential FACTS white space. Existing players: Tierarzt-Onlineverzeichnis [C090] (professional_directory, quality assessment: no). Clear gap for transparent, methodology-backed quality orientation. |
+| **Facts (Evidenced)** | • 10385 Tierarztpraxen recorded in Germany (2025) via Landestierärztekammern member registers; tierarzt-onlineverzeichnis.de [P076]<br>• 11216 niedergelassene Tierärzte recorded in Germany (2025) via Landestierärztekammern [P077]<br>• pet_supplies_market: 7 EUR_bn in 2025 [I0628] |
+| **Hypotheses (Unverified)** | • Qualified providers will show positive willingness to license a FOCUS Quality Seal (Commercial status: plausible_but_unvalidated).<br>• Consumers consider independent editorial ranking significantly more trustworthy than sponsored lead-generation marketplaces.<br>• A master list of certified providers can be systematically compiled from official chambers and registers. |
+| **Risks & Uncertainties** | • Provider universe fragmentation: Reaching smaller regional businesses requires multi-channel sales outreach. |
+| **Historical Learning** | No negative legal precedent or court sanction identified in the dataset for this topic. |
+| **Next Validation Questions** | • Can an exhaustive master list be acquired directly from public registers or trade associations?<br>• What objective quality criteria (certifications, inspection reports, customer satisfaction) can be audited at scale?<br>• What is the willingness-to-pay among mid-sized providers for a regional or national quality seal? |
+| **Evidence Record IDs** | C090, I0627, I0628, P076, P077, R008, S257, S258 |
+
+---
+
+## TOP Age-appropriate home adaptation providers
+
+- **Recommended Status:** **`MONITOR`**
+- **Overall Score:** `3.73 / 5.0`
+- **Human-in-the-Loop Review:** ✅ NO
+
+| Mandatory Field | Strategic Assessment & Evidenced Claims |
+|---|---|
+| **Proposed TOP-List Topic** | TOP Age-appropriate home adaptation providers |
+| **Consumer Problem** | Hard to find trustworthy firms that plan and execute barrier-free conversions well. |
+| **Target User** | Older homeowners/tenants and their relatives |
+| **Potential Target Entity** | Service providers and specialist firms in Age-appropriate home adaptation |
+| **Why Now?** | Many dwellings are not barrier-reduced; older people and relatives need support with adaptation, conversion and access to specialised providers. () [S003] | The BAG Wohnungsanpassung connects housing-advice centres and supports people adapting their homes for independent living. () [S102] | Regulatory Milestone: Pflegekasse home adaptation grant raised to EUR 4,180 (2025-01-01) [R021] | Regulatory Milestone: KfW 455-B without budget in 2025 (2025-01-01) [R022] | Market metric: age_appropriate_dwellings_missing = 2200000 dwellings (current (study date unconfirmed)) [I0356] |
+| **Portfolio Fit** | Expands FOCUS brand into high-affinity white space under FOCUS Gesundheit / Deutschland Test. |
+| **Competitive Situation** | Market type: Directory-dominated. Existing players: BAG Wohnungsanpassung [C007] (public_information_service, quality assessment: no); DISQ Servicestudie Treppenliftanbieter [C112] (consumer_test, quality assessment: yes). Clear gap for transparent, methodology-backed quality orientation. |
+| **Facts (Evidenced)** | • 6 Large stairlift manufacturers with nationwide service recorded in Germany (2025) via DISQ sample; manufacturer websites [P047]<br>• age_appropriate_dwellings_needed: 3300000 dwellings in 2040 [I0357] |
+| **Hypotheses (Unverified)** | • Qualified providers will show positive willingness to license a FOCUS Quality Seal (Commercial status: unclear).<br>• Consumers consider independent editorial ranking significantly more trustworthy than sponsored lead-generation marketplaces.<br>• A master list of certified providers can be systematically compiled from official chambers and registers. |
+| **Risks & Uncertainties** | • Provider universe fragmentation: Reaching smaller regional businesses requires multi-channel sales outreach. |
+| **Historical Learning** | No negative legal precedent or court sanction identified in the dataset for this topic. |
+| **Next Validation Questions** | • Can an exhaustive master list be acquired directly from public registers or trade associations?<br>• What objective quality criteria (certifications, inspection reports, customer satisfaction) can be audited at scale?<br>• What is the willingness-to-pay among mid-sized providers for a regional or national quality seal? |
+| **Evidence Record IDs** | C007, C112, I0356, I0357, P047, R021, R022, S003, S102 |
+
+---
+
+## TOP Digital health applications (DiGA) orientation
 
 - **Recommended Status:** **`MONITOR`**
 - **Overall Score:** `3.51 / 5.0`
@@ -62,7 +86,7 @@
 
 | Mandatory Field | Strategic Assessment & Evidenced Claims |
 |---|---|
-| **Proposed TOP-List Topic** | TOP Providers for Digital health |
+| **Proposed TOP-List Topic** | TOP Digital health applications (DiGA) orientation |
 | **Consumer Problem** | Patients and doctors lack a usable overview of which prescribable app fits which indication. |
 | **Target User** | Patients and prescribing doctors |
 | **Potential Target Entity** | Service providers and specialist firms in Digital health |
@@ -78,7 +102,7 @@
 
 ---
 
-## TOP Providers for End of life & inheritance
+## TOP Funeral service providers (Bestatter)
 
 - **Recommended Status:** **`DO NOT PURSUE`**
 - **Overall Score:** `3.06 / 5.0`
@@ -88,7 +112,7 @@
 
 | Mandatory Field | Strategic Assessment & Evidenced Claims |
 |---|---|
-| **Proposed TOP-List Topic** | TOP Providers for End of life & inheritance |
+| **Proposed TOP-List Topic** | TOP Funeral service providers (Bestatter) |
 | **Consumer Problem** | Relatives must decide quickly, in grief, with little price transparency. |
 | **Target User** | Bereaved relatives; people planning their own funeral |
 | **Potential Target Entity** | Service providers and specialist firms in End of life & inheritance |

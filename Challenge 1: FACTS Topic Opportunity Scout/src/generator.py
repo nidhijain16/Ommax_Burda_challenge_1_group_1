@@ -34,7 +34,11 @@ class CardGenerator:
 
         if spaces:
             space = spaces[0]
-            proposed_topic = f"TOP Providers for {topic_label}"
+            space_title = space.get("title", "")
+            if space_title:
+                proposed_topic = f"TOP {space_title}"
+            else:
+                proposed_topic = f"TOP Providers for {topic_label}"
             consumer_problem = space.get("consumer_problem") or desc
             target_user = space.get("target_user") or "Consumers and families seeking qualified, verified providers"
             target_entity = space.get("target_entity") or f"Service providers and specialist firms in {topic_label}"

@@ -1,59 +1,6 @@
 [
   {
-    "proposed_topic": "TOP Providers for Age-appropriate home adaptation",
-    "topic_key": "home_adaptation",
-    "consumer_problem": "Hard to find trustworthy firms that plan and execute barrier-free conversions well.",
-    "target_user": "Older homeowners/tenants and their relatives",
-    "target_entity": "Service providers and specialist firms in Age-appropriate home adaptation",
-    "why_now": "Many dwellings are not barrier-reduced; older people and relatives need support with adaptation, conversion and access to specialised providers. () [S003] | The BAG Wohnungsanpassung connects housing-advice centres and supports people adapting their homes for independent living. () [S102] | Regulatory Milestone: Pflegekasse home adaptation grant raised to EUR 4,180 (2025-01-01) [R021] | Regulatory Milestone: KfW 455-B without budget in 2025 (2025-01-01) [R022] | Market metric: age_appropriate_dwellings_missing = 2200000 dwellings (current (study date unconfirmed)) [I0356]",
-    "portfolio_fit": "Expands FOCUS brand into high-affinity white space under FOCUS Gesundheit / Deutschland Test.",
-    "competitive_situation": "Market type: Directory-dominated. Existing players: BAG Wohnungsanpassung [C007] (public_information_service, quality assessment: no); DISQ Servicestudie Treppenliftanbieter [C112] (consumer_test, quality assessment: yes). Clear gap for transparent, methodology-backed quality orientation.",
-    "evidence": [
-      "C007",
-      "C112",
-      "I0356",
-      "I0357",
-      "P047",
-      "R021",
-      "R022",
-      "S003",
-      "S102"
-    ],
-    "facts": [
-      "6 Large stairlift manufacturers with nationwide service recorded in Germany (2025) via DISQ sample; manufacturer websites [P047]",
-      "age_appropriate_dwellings_needed: 3300000 dwellings in 2040 [I0357]"
-    ],
-    "hypotheses": [
-      "Qualified providers will show positive willingness to license a FOCUS Quality Seal (Commercial status: unclear).",
-      "Consumers consider independent editorial ranking significantly more trustworthy than sponsored lead-generation marketplaces.",
-      "A master list of certified providers can be systematically compiled from official chambers and registers."
-    ],
-    "risks_and_uncertainties": [
-      "Provider universe fragmentation: Reaching smaller regional businesses requires multi-channel sales outreach."
-    ],
-    "historical_learning": "No negative legal precedent or court sanction identified in the dataset for this topic.",
-    "next_validation_questions": [
-      "Can an exhaustive master list be acquired directly from public registers or trade associations?",
-      "What objective quality criteria (certifications, inspection reports, customer satisfaction) can be audited at scale?",
-      "What is the willingness-to-pay among mid-sized providers for a regional or national quality seal?"
-    ],
-    "recommended_status": "Monitor",
-    "human_review_required": false,
-    "human_review_reasons": [],
-    "commercial_potential_label": "unclear",
-    "market_type": "Directory-dominated",
-    "scores": {
-      "consumer_relevance": 3.4,
-      "timing_dynamics": 4.2,
-      "competitive_white_space": 4.2,
-      "portfolio_fit": 4.5,
-      "commercial_potential": 2.0,
-      "risk_uncertainty": 4.0
-    },
-    "overall_score": 3.73
-  },
-  {
-    "proposed_topic": "TOP Providers for Heat pumps & heating replacement",
+    "proposed_topic": "TOP Heat-pump installers for owner-occupied homes",
     "topic_key": "heat_pumps",
     "consumer_problem": "Owners must pick an installer for a large, technically demanding investment under changing rules.",
     "target_user": "Owners replacing a fossil heating system",
@@ -109,7 +56,113 @@
     "overall_score": 3.66
   },
   {
-    "proposed_topic": "TOP Providers for Digital health",
+    "proposed_topic": "TOP Veterinary practices and emergency vet services",
+    "topic_key": "veterinary",
+    "consumer_problem": "Pet owners face rising costs and fewer emergency services and want trustworthy vets nearby.",
+    "target_user": "Pet owners",
+    "target_entity": "Service providers and specialist firms in Veterinary care",
+    "why_now": "New GOT in force 22 Nov 2022; 43% of households own pets; pet market ~7bn EUR. (2022-2025) [S257] | 10,385 practices but only 129 clinics; 7,103 retired vs 11,216 self-employed. (2025) [S258] | Regulatory Milestone: New Gebührenordnung für Tierärzte (GOT) in force (2022-11-22) [R008] | Market metric: households_with_pets_share = 43 percent (2025) [I0627]",
+    "portfolio_fit": "Expands FOCUS brand into high-affinity white space under FOCUS Gesundheit / Deutschland Test.",
+    "competitive_situation": "Market type: Potential FACTS white space. Existing players: Tierarzt-Onlineverzeichnis [C090] (professional_directory, quality assessment: no). Clear gap for transparent, methodology-backed quality orientation.",
+    "evidence": [
+      "C090",
+      "I0627",
+      "I0628",
+      "P076",
+      "P077",
+      "R008",
+      "S257",
+      "S258"
+    ],
+    "facts": [
+      "10385 Tierarztpraxen recorded in Germany (2025) via Landestierärztekammern member registers; tierarzt-onlineverzeichnis.de [P076]",
+      "11216 niedergelassene Tierärzte recorded in Germany (2025) via Landestierärztekammern [P077]",
+      "pet_supplies_market: 7 EUR_bn in 2025 [I0628]"
+    ],
+    "hypotheses": [
+      "Qualified providers will show positive willingness to license a FOCUS Quality Seal (Commercial status: plausible_but_unvalidated).",
+      "Consumers consider independent editorial ranking significantly more trustworthy than sponsored lead-generation marketplaces.",
+      "A master list of certified providers can be systematically compiled from official chambers and registers."
+    ],
+    "risks_and_uncertainties": [
+      "Provider universe fragmentation: Reaching smaller regional businesses requires multi-channel sales outreach."
+    ],
+    "historical_learning": "No negative legal precedent or court sanction identified in the dataset for this topic.",
+    "next_validation_questions": [
+      "Can an exhaustive master list be acquired directly from public registers or trade associations?",
+      "What objective quality criteria (certifications, inspection reports, customer satisfaction) can be audited at scale?",
+      "What is the willingness-to-pay among mid-sized providers for a regional or national quality seal?"
+    ],
+    "recommended_status": "Validate Next",
+    "human_review_required": false,
+    "human_review_reasons": [],
+    "commercial_potential_label": "plausible_but_unvalidated",
+    "market_type": "Potential FACTS white space",
+    "scores": {
+      "consumer_relevance": 3.4,
+      "timing_dynamics": 2.4,
+      "competitive_white_space": 4.0,
+      "portfolio_fit": 4.5,
+      "commercial_potential": 4.5,
+      "risk_uncertainty": 4.0
+    },
+    "overall_score": 3.79
+  },
+  {
+    "proposed_topic": "TOP Age-appropriate home adaptation providers",
+    "topic_key": "home_adaptation",
+    "consumer_problem": "Hard to find trustworthy firms that plan and execute barrier-free conversions well.",
+    "target_user": "Older homeowners/tenants and their relatives",
+    "target_entity": "Service providers and specialist firms in Age-appropriate home adaptation",
+    "why_now": "Many dwellings are not barrier-reduced; older people and relatives need support with adaptation, conversion and access to specialised providers. () [S003] | The BAG Wohnungsanpassung connects housing-advice centres and supports people adapting their homes for independent living. () [S102] | Regulatory Milestone: Pflegekasse home adaptation grant raised to EUR 4,180 (2025-01-01) [R021] | Regulatory Milestone: KfW 455-B without budget in 2025 (2025-01-01) [R022] | Market metric: age_appropriate_dwellings_missing = 2200000 dwellings (current (study date unconfirmed)) [I0356]",
+    "portfolio_fit": "Expands FOCUS brand into high-affinity white space under FOCUS Gesundheit / Deutschland Test.",
+    "competitive_situation": "Market type: Directory-dominated. Existing players: BAG Wohnungsanpassung [C007] (public_information_service, quality assessment: no); DISQ Servicestudie Treppenliftanbieter [C112] (consumer_test, quality assessment: yes). Clear gap for transparent, methodology-backed quality orientation.",
+    "evidence": [
+      "C007",
+      "C112",
+      "I0356",
+      "I0357",
+      "P047",
+      "R021",
+      "R022",
+      "S003",
+      "S102"
+    ],
+    "facts": [
+      "6 Large stairlift manufacturers with nationwide service recorded in Germany (2025) via DISQ sample; manufacturer websites [P047]",
+      "age_appropriate_dwellings_needed: 3300000 dwellings in 2040 [I0357]"
+    ],
+    "hypotheses": [
+      "Qualified providers will show positive willingness to license a FOCUS Quality Seal (Commercial status: unclear).",
+      "Consumers consider independent editorial ranking significantly more trustworthy than sponsored lead-generation marketplaces.",
+      "A master list of certified providers can be systematically compiled from official chambers and registers."
+    ],
+    "risks_and_uncertainties": [
+      "Provider universe fragmentation: Reaching smaller regional businesses requires multi-channel sales outreach."
+    ],
+    "historical_learning": "No negative legal precedent or court sanction identified in the dataset for this topic.",
+    "next_validation_questions": [
+      "Can an exhaustive master list be acquired directly from public registers or trade associations?",
+      "What objective quality criteria (certifications, inspection reports, customer satisfaction) can be audited at scale?",
+      "What is the willingness-to-pay among mid-sized providers for a regional or national quality seal?"
+    ],
+    "recommended_status": "Monitor",
+    "human_review_required": false,
+    "human_review_reasons": [],
+    "commercial_potential_label": "unclear",
+    "market_type": "Directory-dominated",
+    "scores": {
+      "consumer_relevance": 3.4,
+      "timing_dynamics": 4.2,
+      "competitive_white_space": 4.2,
+      "portfolio_fit": 4.5,
+      "commercial_potential": 2.0,
+      "risk_uncertainty": 4.0
+    },
+    "overall_score": 3.73
+  },
+  {
+    "proposed_topic": "TOP Digital health applications (DiGA) orientation",
     "topic_key": "digital_health",
     "consumer_problem": "Patients and doctors lack a usable overview of which prescribable app fits which indication.",
     "target_user": "Patients and prescribing doctors",
@@ -165,7 +218,7 @@
     "overall_score": 3.51
   },
   {
-    "proposed_topic": "TOP Providers for End of life & inheritance",
+    "proposed_topic": "TOP Funeral service providers (Bestatter)",
     "topic_key": "end_of_life",
     "consumer_problem": "Relatives must decide quickly, in grief, with little price transparency.",
     "target_user": "Bereaved relatives; people planning their own funeral",

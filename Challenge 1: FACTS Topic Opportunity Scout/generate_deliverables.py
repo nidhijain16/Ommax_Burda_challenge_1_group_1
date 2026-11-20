@@ -47,10 +47,11 @@ def main(argv=None):
     loader = DataLoader(data_dir)
     generator = CardGenerator(loader)
 
-    # 4 showcase topics spanning Validate Next, Monitor, and Do Not Pursue
+    # Curated portfolio of 5 showcase topics (2 Validate Next, 2 Monitor, 1 Do Not Pursue)
     showcase_keys = [
-        "home_adaptation",
         "heat_pumps",
+        "veterinary",
+        "home_adaptation",
         "digital_health",
         "end_of_life",
     ]
