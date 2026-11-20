@@ -5,3 +5,5 @@ __pycache__/
 *.docx
 TEAM_EXECUTION_PLAN.md
 PITCH_AND_EXECUTIVE_QA.md
+SYSTEM_FLOWCHART.md
+*wedge_validation_report.json
