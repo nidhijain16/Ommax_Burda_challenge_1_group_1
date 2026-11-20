@@ -350,9 +350,48 @@ with tab_lrn:
     else:
         st.write("No negative court precedents or failed rating cases recorded.")
 
+# In-App Deliverables Viewer
+st.markdown("---")
+st.markdown("### 📖 Official Deliverables Viewer (Read In-App)")
+st.caption("Inspect the generated deliverables directly inside this cockpit without needing any external reader.")
+
+deliv_tab1, deliv_tab2, deliv_tab3 = st.tabs([
+    "📑 Executive Cards Report (cards.md)",
+    "📄 Machine-Readable JSON (cards.json)",
+    "📐 Scoring Methodology (LOGIC.md)"
+])
+
+with deliv_tab1:
+    md_path = os.path.join(APP_DIR, "cards.md")
+    if os.path.exists(md_path):
+        with open(md_path, "r", encoding="utf-8") as f:
+            st.markdown(f.read())
+
+with deliv_tab2:
+    json_path = os.path.join(APP_DIR, "cards.json")
+    if os.path.exists(json_path):
+        with open(json_path, "r", encoding="utf-8") as f:
+            st.json(json.load(f))
+
+with deliv_tab3:
+    logic_path = os.path.join(APP_DIR, "LOGIC.md")
+    if os.path.exists(logic_path):
+        with open(logic_path, "r", encoding="utf-8") as f:
+            st.markdown(f.read())
+
 # Export section in sidebar
 st.sidebar.markdown("---")
 st.sidebar.subheader("💾 Export Deliverables")
+
+html_file = os.path.join(APP_DIR, "cards.html")
+if os.path.exists(html_file):
+    with open(html_file, "r", encoding="utf-8") as f:
+        st.sidebar.download_button(
+            label="🌐 Download cards.html (Web View)",
+            data=f.read(),
+            file_name="cards.html",
+            mime="text/html"
+        )
 
 json_file = os.path.join(APP_DIR, "cards.json")
 if os.path.exists(json_file):

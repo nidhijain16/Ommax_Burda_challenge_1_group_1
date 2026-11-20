@@ -123,6 +123,70 @@ def main(argv=None):
             f.write("\n---\n\n")
     print(f"Exported {md_path}")
 
+    # 2b. Export cards.html (Universal Browser Viewer)
+    html_path = os.path.join(out_dir, "cards.html")
+    with open(html_path, "w", encoding="utf-8") as f:
+        f.write("""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FACTS Topic Opportunity Scout — Opportunity Cards</title>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 40px auto; max-width: 1000px; line-height: 1.6; color: #1a1a1a; padding: 0 20px; }
+h1 { color: #003366; border-bottom: 3px solid #003366; padding-bottom: 10px; }
+h2 { color: #004085; margin-top: 40px; border-bottom: 1px solid #ccc; padding-bottom: 6px; }
+table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95em; }
+th, td { border: 1px solid #dee2e6; padding: 10px 14px; text-align: left; }
+th { background-color: #f1f3f5; width: 28%; font-weight: 600; }
+.badge { display: inline-block; padding: 4px 10px; border-radius: 12px; font-weight: bold; font-size: 0.85em; }
+.badge-validate { background-color: #d4edda; color: #155724; }
+.badge-monitor { background-color: #fff3cd; color: #856404; }
+.badge-deprioritise { background-color: #e2e3e5; color: #383d41; }
+.badge-kill { background-color: #f8d7da; color: #721c24; }
+.alert-box { background-color: #f8d7da; border-left: 5px solid #dc3545; padding: 12px; margin: 15px 0; border-radius: 4px; }
+</style>
+</head>
+<body>
+<h1>🧭 FACTS Topic Opportunity Scout — Executive Opportunity Cards</h1>
+<p><strong>TUM × OMMAX AI Hackathon · Hubert Burda Media / FACTS</strong></p>
+<hr>
+""")
+        for c in cards:
+            st_val = c.recommended_status.value
+            if st_val == "Validate Next":
+                badge_cls = "badge-validate"
+            elif st_val == "Monitor":
+                badge_cls = "badge-monitor"
+            elif st_val == "Deprioritise":
+                badge_cls = "badge-deprioritise"
+            else:
+                badge_cls = "badge-kill"
+
+            f.write(f"<h2>{c.proposed_topic}</h2>\n")
+            f.write(f"<p><span class='badge {badge_cls}'>{st_val.upper()}</span> &nbsp; <strong>Score:</strong> {c.overall_score}/5.0 &nbsp; | &nbsp; <strong>Human Review:</strong> {'⚠️ YES' if c.human_review_required else '✅ NO'}</p>\n")
+            if c.human_review_reasons:
+                f.write("<div class='alert-box'><strong>🔴 Human Review Triggers:</strong><ul>\n")
+                for r in c.human_review_reasons:
+                    f.write(f"<li>{r}</li>\n")
+                f.write("</ul></div>\n")
+            f.write("<table>\n")
+            f.write(f"<tr><th>Proposed Topic</th><td><strong>{c.proposed_topic}</strong></td></tr>\n")
+            f.write(f"<tr><th>Consumer Problem</th><td>{c.consumer_problem}</td></tr>\n")
+            f.write(f"<tr><th>Target User</th><td>{c.target_user}</td></tr>\n")
+            f.write(f"<tr><th>Target Entity</th><td>{c.target_entity}</td></tr>\n")
+            f.write(f"<tr><th>Why Now?</th><td>{c.why_now}</td></tr>\n")
+            f.write(f"<tr><th>Portfolio Fit</th><td>{c.portfolio_fit}</td></tr>\n")
+            f.write(f"<tr><th>Competitive Situation</th><td>{c.competitive_situation}</td></tr>\n")
+            f.write(f"<tr><th>Facts (Evidenced)</th><td><ul>" + "".join([f"<li>{fact}</li>" for fact in c.facts]) + "</ul></td></tr>\n")
+            f.write(f"<tr><th>Hypotheses (Unverified)</th><td><ul>" + "".join([f"<li>{hyp}</li>" for hyp in c.hypotheses]) + "</ul></td></tr>\n")
+            f.write(f"<tr><th>Risks & Uncertainties</th><td><ul>" + "".join([f"<li>{rk}</li>" for rk in c.risks_and_uncertainties]) + "</ul></td></tr>\n")
+            f.write(f"<tr><th>Historical Learning</th><td>{c.historical_learning}</td></tr>\n")
+            f.write(f"<tr><th>Next Validation Questions</th><td><ul>" + "".join([f"<li>{q}</li>" for q in c.next_validation_questions]) + "</ul></td></tr>\n")
+            f.write(f"<tr><th>Evidence Record IDs</th><td><code>{', '.join(c.evidence)}</code></td></tr>\n")
+            f.write("</table>\n<hr>\n")
+        f.write("</body></html>")
+    print(f"Exported {html_path}")
+
     # 3. Export LOGIC.md
     logic_path = os.path.join(out_dir, "LOGIC.md")
     with open(logic_path, "w", encoding="utf-8") as f:
