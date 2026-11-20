@@ -55,9 +55,25 @@ Our solution uses a **two-layer hybrid architecture**:
 
 ---
 
+## Optional Step: Wedge Title Creator (default OFF)
+
+For each card, DeepSeek V4 Pro (via the Tesseracted Labs gateway) proposes up to 3 narrower TOP-list "wedge" titles (one entity type + one decision moment, optional region); `src/wedges.py` validates them in code.
+```bash
+cd "Challenge 1: FACTS Topic Opportunity Scout"
+export FACTS_GATEWAY_API_KEY=...            # required; optional: FACTS_GATEWAY_BASE_URL
+export FACTS_WEDGE_MODEL=tesseracted-labs-gmbh/deepseek-ai/DeepSeek-V4-Pro-0813   # default model id
+python generate_deliverables.py --wedges    # without --wedges the output is unchanged
+python -m unittest discover -s tests        # offline tests, LLM mocked
+```
+- Wedges are **hypotheses**: never scored; card status and score are untouched. Shown as `wedges` (+ `parent_title`) in `cards.json` and a "Narrower wedges (hypotheses, unscored)" section in `cards.md`.
+- Rejected (with reasons in `wedge_validation_report.json`): unknown record IDs or IDs not in the card's evidence, title not narrower than the parent or > 12 words, numbers not found in a cited record, superlatives, market-size/population claims. Portfolio near-duplicates are flagged, not rejected. Each wedge carries `size_status: "unvalidated"` and `generated_by`.
+- No key, no `openai` package, HTTP error, empty or truncated reply → no wedges; the pipeline still runs.
+
+---
+
 ## Deliverables Generated
 
-- 📄 **[cards.json](file:///Users/prashantjoshi/Desktop/Projects-Nidhi/Hackathon-OMMAX-x-Burda/Challenge%201:%20FACTS%20Topic%20Opportunity%20Scout/cards.json)** — Machine-readable opportunity cards.
-- 📑 **[cards.md](file:///Users/prashantjoshi/Desktop/Projects-Nidhi/Hackathon-OMMAX-x-Burda/Challenge%201:%20FACTS%20Topic%20Opportunity%20Scout/cards.md)** — Executive opportunity cards report.
-- 📐 **[LOGIC.md](file:///Users/prashantjoshi/Desktop/Projects-Nidhi/Hackathon-OMMAX-x-Burda/Challenge%201:%20FACTS%20Topic%20Opportunity%20Scout/LOGIC.md)** — One-page prioritisation methodology & scoring rubric.
-- 🗺️ **[TEAM_EXECUTION_PLAN.md](file:///Users/prashantjoshi/Desktop/Projects-Nidhi/Hackathon-OMMAX-x-Burda/TEAM_EXECUTION_PLAN.md)** — Team strategy & 5-minute pitch script.
+- 📄 **[cards.json](Challenge%201%3A%20FACTS%20Topic%20Opportunity%20Scout/cards.json)** — Machine-readable opportunity cards.
+- 📑 **[cards.md](Challenge%201%3A%20FACTS%20Topic%20Opportunity%20Scout/cards.md)** — Executive opportunity cards report.
+- 📐 **[LOGIC.md](Challenge%201%3A%20FACTS%20Topic%20Opportunity%20Scout/LOGIC.md)** — One-page prioritisation methodology & scoring rubric.
+- 🗺️ **TEAM_EXECUTION_PLAN.md** — Team strategy & 5-minute pitch script (kept outside the repository).

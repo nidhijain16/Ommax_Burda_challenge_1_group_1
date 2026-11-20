@@ -49,12 +49,14 @@ class DataLoader:
             "populations": "population_id",
             "events": "event_id",
             "sources": "source_id",
-            "spaces": "space_id",
+            "spaces": "context_id",  # 09_opportunity_spaces.csv uses context_id (M...)
         }
 
         for table_key, id_col in id_col_map.items():
             for row in self.raw_data[table_key]:
                 rec_id = row.get(id_col)
+                if not rec_id and table_key == "spaces":
+                    rec_id = row.get("space_id")  # backwards compatibility with older exports
                 if rec_id:
                     self.by_id[rec_id] = {**row, "_table": table_key}
 
